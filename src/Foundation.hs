@@ -4,6 +4,8 @@ import           Yesod
 import           Yesod.Default.Util
 import           Yesod.Form.Jquery
 
+-- adding my own comment
+
 {-
 
 Every Yesod application has a foundation data type. This is a data type
