@@ -19,3 +19,23 @@ import           Yesod.Form.Jquery   as X (urlJqueryJs)
 
 widgetFile :: FilePath -> ExpQ
 widgetFile = widgetFileReload def
+
+{- my experiments
+
+getDomeR :: Handler Html
+-- defaultLayout uses the application's standard page layout to display
+-- some contents. In our application, we're just using the standard
+-- layout, which includes a basic HTML 5 page outline.
+getDomeR = defaultLayout $ do
+    setTitle "Yesod Web Service Homepage"
+    
+data MyApp = MyApp
+instance Yesod MyApp
+mkYesodData "MyApp" [parseRoutes|
+/         DomeR     GET
+|]
+
+-- bubb = warpEnv
+-- main :: IO ()
+-- main = warpEnv App
+-}
